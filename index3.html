@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+</html>
+    <head>
+        <meta charset="utf-8">
+        <script src="https://d3js.org/d3.v4.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-annotation/2.5.1/d3-annotation.min.js" integrity="sha512-iBAeBWWWFb8HqSBcrqcz98iIpuVH1la39dEYHtyQ/pGpeCQTQVvLJOWAuhv2Q7JSHp9k7hWA7sGxU3hHJe+tFg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="retype.js"></script>
+        
+    </head>
+    <body>
+        <h1> The Other Languages of the USA </h1>
+        <div id="btn-group"></div>
+        <div id="my_dataviz" style="display:flex"></div>
+
+        <div id="narration-box" style="width: 800px; height: 200px; margin-top: 10px;">  
+            <h2 id="narration_year"> </h2>
+            <p id="narration_text" style="width: 800px;">
+                
+            </p>
+
+        </div>
+
+        <script type="module">
+            import SceneManager from './scenes.js'
+            import annotations from './annotations.js'
+            import narrations from './narration.js'
+            d3.csv('languagesAtHome2000.csv', function(data2000) {
+               d3.csv('languagesAtHome2006_08.csv', function(data2007) {
+                    d3.csv('languagesAtHome2009_13.csv', function(data2013) {
+                        const data3 = retype(data2013)
+                        const data2 = filterBasedOnMostRecentYear(data3, data2007)
+                        const data1 = filterBasedOnMostRecentYear(data3, data2000)
+                        const data4 = extrapolate(2020,data1,data2,data3)
+                        console.log(data4)
+                        
+
+                        var margin = {top: 50, right: 60, bottom: 20, left: 70}
+                        var width = 1660 - margin.left - margin.right
+                        var height = 700 - margin.top - margin.bottom;
+                        
+                        let annotationsList = []
+                        for (let i = 0; i < annotations.length;i++) {
+                            let tempMakeAno = d3.annotation().annotations(annotations[i])
+                            console.log(tempMakeAno)
+                            annotationsList.push(tempMakeAno)
+                        }
+                        
+                        const scenes = new SceneManager(extrapolate,data4, data3,data2,data1, margin,d3, annotationsList, width, height)
+
+                    })
+               })
+            })
+        </script>
+    </body>
+</html>
