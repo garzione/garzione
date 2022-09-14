@@ -9,3 +9,4 @@ Skills: React, Vue, Node.js, Flask, Numpy, Pandas
 Current Project(s): 
 - Solana la Vella, a Solana extension for Chrome
 - Google Foobar Challenge
+- Learning about Kaggle and Numerai
