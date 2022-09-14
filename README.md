@@ -1,16 +1,13 @@
-### Hi there 👋
+#  𓁟
+#### I am a software engineer.
+![I am a software engineer.](www.garzi.one)
 
-<!--
-**garzione/garzione** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+I like full stack, data science, and broadly, fintech.
 
-Here are some ideas to get you started:
+Skills: React, Vue, Node.js, Flask, Numpy, Pandas
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+Current Project(s): 
+- Solana la Vella, a Solana extension for Chrome
+- Google Foobar Challenge
+
+
