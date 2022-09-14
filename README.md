@@ -1,6 +1,5 @@
-#  𓁟
-#### I am a software engineer.
-![I am a software engineer.](www.garzi.one)
+#  𓁟𓁟𓁟
+![I am a Software Engineer.](www.garzi.one)
 
 I like full stack, data science, and broadly, fintech.
 
